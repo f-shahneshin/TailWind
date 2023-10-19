@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind-project</title>
+  <link rel="stylesheet" href="../dist/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Barriecito&family=Dancing+Script:wght@400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Barriecito&family=Dancing+Script:wght@400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Phudu:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Barriecito&family=Dancing+Script:wght@400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Phudu:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+  /* Position the image container (needed to position the left and right arrows) */
+  .myfooter {
+    position: relative;
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+</style>
+
+<body
+  style="background: rgb(1,1,4);
+  background: linear-gradient(90deg, rgba(1,1,4,1) 0%, rgba(3,3,36,1) 60%, rgba(1,6,27,1) 100%, rgba(1,72,87,1) 100%);">
+  <!---------------------- navbar------------ -->
+  <header class="bg-inherit">
+    <nav class="mx-auto max-w-7xl px-6 lg:px-8 " aria-label="Top">
+      <div class="flex w-full items-center justify-between border-b border-indigo-500 py-6 lg:border-none">
+        <div class="flex items-center">
+          <a href="#">
+            <span class="sr-only">Your Company</span>
+            <img class="h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=white" alt="">
+          </a>
+          <div class="ml-10 hidden space-x-8 lg:block">
+            <a href="#" class="text-base font-medium text-white hover:text-purple-800">Solutions</a>
+
+            <a href="#" class="text-base font-medium text-white hover:text-purple-800">Pricing</a>
+
+            <a href="#" class="text-base font-medium text-white hover:text-purple-800">Docs</a>
+
+            <a href="#" class="text-base font-medium text-white hover:text-purple-800">Company</a>
+          </div>
+        </div>
+        <div class="ml-10 space-x-4">
+          <a href="#"
+            class="inline-block rounded-md border border-transparent py-2 px-4 text-base font-medium text-blue-950 hover:text-slate-100"
+            style="background: rgb(238,174,202);
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);">Sign
+            in</a>
+          <a href="#"
+            class="inline-block rounded-md border border-transparent py-2 px-4 text-base font-medium text-blue-950 hover:text-slate-100"
+            style="background: rgb(238,174,202);
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);">Sign
+            up</a>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-x-6 py-4 lg:hidden">
+        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Solutions</a>
+
+        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Pricing</a>
+
+        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Docs</a>
+
+        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Company</a>
+      </div>
+    </nav>
+  </header>
+  <br><br><br><br><br>
+
+  <!-- =================introduce============ -->
+  <h1
+    class="font-primary capitalize bg-gradient-to-r from-blue-600 via-pink-200 to-purple-500 text-transparent bg-clip-text text-center font-bold text-[20px] md:text-[50px]">
+    digital solutions for
+    your <span class="underline">business</span></h1>
+  <div class="grid grid-cols-1 w-[10%] h-{3px} bg-white "></div>
+
+  <p class=" text-white text-center px-8 pt-7 font-primary text-[20px]">Lorem, ipsum dolor sit amet consectetur
+    adipisicing elit.
+    <br> Accusamus fugiat consequatur quod esse perferendis nulla odio in delectus.
+    <br> Harum non rerum et ipsum inventore eveniet velit obcaecati.
+    <br> Obcaecati, consectetur voluptate.
+  </p>
+
+  <br><br><br><br><br>
+
+  <!-- ------button------ -->
+  <div>
+    <button
+      class="borde border-blue-950 border-solid text-purple-950  hover:text-purple-700 py-2 md:py-4 px-8 md:px-14 rounded-3xl font-display font-[10px] md:font-[40px]  relative -right-1/3  w-[30%]"
+      style="background: rgb(153, 72, 107);
+      background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);">
+      <a href="https://tailwindui.com/components?ref=sidebar " target="_blank">Get Start</a>
+    </button>
+    <br><br><br>
+    <button
+      class=" text-purple-950  hover:text-purple-700 py-2 md:py-4 px-8 md:px-14 rounded-3xl font-display font-[10px] md:font-[40px]  relative -right-1/3  w-[30%] "
+      style="background: rgb(238,174,202);
+      background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);">
+      <a href="https://tailwindui.com/components?ref=sidebar" target="_blank">How It Work</a>
+    </button>
+  </div>
+
+  <section>
+    <!-- Image gird -->
+    <div class="p-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
+      <img
+        class="w-full h-full object-cover cursor-pointer shadow-[inset_0px_24px_25px_21px_#fff5f5,0px_3px_8px_0px_#00000024] border rounded-[10px]"
+        src="https://picsum.photos/id/182/600/400" alt="web"
+        onclick="showModal('https://picsum.photos/id/182/600/400')" />
+
+      <img
+        class="w-full h-full object-cover cursor-pointer shadow-[inset_0px_24px_25px_21px_#fff5f5,0px_3px_8px_0px_#00000024] border rounded-[10px]"
+        src="https://picsum.photos/id/182/600/400" alt="web"
+        onclick="showModal('https://picsum.photos/id/182/600/400')" />
+
+      <img
+        class="w-full h-full object-cover cursor-pointer shadow-[inset_0px_24px_25px_21px_#fff5f5,0px_3px_8px_0px_#00000024] border rounded-[10px]"
+        src="https://picsum.photos/id/182/600/400" alt="web"
+        onclick="showModal('https://picsum.photos/id/182/600/400')" />
+
+
+      <img
+        class="w-full h-full object-cover cursor-pointer shadow-[inset_0px_24px_25px_21px_#fff5f5,0px_3px_8px_0px_#00000024] border rounded-[10px]"
+        src="https://picsum.photos/id/182/600/400" alt="web"
+        onclick="showModal('https://picsum.photos/id/182/600/400')" />
+    </div>
+
+    <!-- The Modal -->
+    <div id="modal" class=" fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center">
+
+      <!-- The close button -->
+      <a class="fixed z-90 top-6 right-8 text-white text-5xl font-bold" href="javascript:void(0)"
+        onclick="closeModal()">&times;</a>
+
+      <!-- A big image will be displayed here -->
+      <img id="modal-img" class="max-w-[800px] max-h-[600px] object-cover" />
+    </div>
+
+    <script>
+      // Get the modal by id
+      var modal = document.getElementById("modal");
+
+      // Get the modal image tag
+      var modalImg = document.getElementById("modal-img");
+
+      // this function is called when a small image is clicked
+      function showModal(src) {
+        modal.classList.remove('hidden');
+        modalImg.src = src;
+      }
+
+      // this function is called when the close button is clicked
+      function closeModal() {
+        modal.classList.add('hidden');
+      }
+    </script>
+  </section>
+
+
+</body>
+
+</html>
